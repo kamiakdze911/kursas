@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form action="sendmail.php" method="GET">
+    <div>
+        <label for="username">Vardas</label>
+        <input type="text" name="username" id="username" />
+    </div>
+    <div>
+        <label for="lastname">Pavardė</label>
+        <input type="text" name="lastname" id="lasname" value="Sivickis"/>
+    </div>
+    <div>
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="useremail" required/>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" id="password"/>
+    </div>
+    <div>
+        <label for="newsletter">Newsletter I want to get</label>
+        <input type="checkbox"  name="newsletter" id="newsletter_sales" value="Sales" />
+    </div>
+    <div>
+        <label>Sales</label>
+        <input type="checkbox" name="newsletter" id="newsletter-discounts" value="Discounts"/>
+
+        <label>Discounts</label>
+        <input type="checkbox" name="newsletter" id="newsletterPurchases" value="Purchases"/>
+
+        <label>Purchases</label>
+    </div>
+
+    <div>
+        <label for="sex">Sex</label>
+        <input type="radio" name="sex" id="sex_male" value="Male"/>
+        <label>Male</label>
+        <input type="radio" name="sex" id="sex_female" value="Female"/>
+        <label>Female</label>
+        <input type="radio" name="sex" id="sex_name" value="Don't want to say" checked/>
+        <label>Don't want to say</label>
+    </div>
+    <div>
+        <label for="comments"></label>
+        <textarea name="comments" id="comments"></textarea>
+     </div>
+     <div>
+        <label for="hobbies"></label>
+        <select name="hobbies" id="hobbies">
+             <optgroup label="outside">
+                 <option>Dance</option>
+                 <option>Travel</option>
+                 <option>Sport</option>
+            </optgroup>
+            <optgroup label="inside">
+                <option>Listen music</option>
+                <option>Sleep</option>
+                <option>Reading</option>
+                <option>Eat</option>
+                <option>TV</option>
+                <option>PC</option>
+            </optgroup>
+        </select>
+     </div>
+        <div>
+        <label for="birthday">birthday</label>
+        <input type="date" name="birthday" id="birthday" />
+     </div>
+     <div>
+        <label for="file">file</label>
+        <input type="file" id="file"/>
+     </div>
+     <div>
+        <input type="submit" value="Sent this form"/>
+      </div>
+    </form>
+
+</body>
+</html>
