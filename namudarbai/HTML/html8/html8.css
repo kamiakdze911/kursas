@@ -1,0 +1,25 @@
+ div {
+        padding: 10px;
+        margin-bottom: 5px;
+     }
+#name {
+
+  margin-left: 8px;
+ }
+.info {
+  position:absolute;
+  left: 30px;
+  top: -17px;
+    background:#fff;
+}
+
+.questions {
+     position:absolute;
+  left: 30px;
+  top: 118px;
+    background:#fff;
+}
+#comments {color: #899696;
+    width: 467px;
+    height: 122px;
+}

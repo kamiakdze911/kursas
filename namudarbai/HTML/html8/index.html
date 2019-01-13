@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html8</title>
+    <link href="html8.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+    <div style="border: 1px solid; ">
+        <div>
+          <p class="info"> Jūsų informacija </p>
+        <label for="name" >Vardas:</label>
+        <input type="text" name="name" id="name"/>
+        </div>
+        <div>
+            <label for="last_name">Pavardė:</label>
+            <input type="text" name="last_name" id="last_name" />
+            </div>
+    </div>
+    <div style="border: 1px solid; margin-top: 20px;   ">
+            <div>
+                <p class="questions"> Klausimai </p>
+                <label for="hobbies">Kaip sužinojete apie mus?</label>
+                <select name="hobbies" id="hobbies">
+                   <option>Google</option>
+                   <option>Facebook</option>
+                   <option>Draugai</option>
+                   <option>Darbe</option>
+                   <option>Universitete</option>
+                </select>
+            </div>
+            <div>
+                <label for="ar apsilankysite vel">Ar apsilankysite vėl?</label><br />
+                <input type="radio" name="ar_apsilankysoite_vel" id="ar_apsilankysote_vel_taip" value="Taip"/>
+                <label>Taip</label>
+                <input type="radio" name="ar_apsilankysite_vel" id="ar_apsilankysote_vel_ne" value="Ne"/>
+                <label>Ne</label>
+                <input type="radio" name="ar_apsilankysite_vel" id="ar_apsilankysote_vel_galbut" value="Galbut"/>
+                <label>Galbūt</label>
+            </div>
+            <div>
+                <label for="comments">Ką manote apie mūsų kursą?</label>
+                <br />
+                <textarea name="comments" id="comments"> Jūsų tekstas</textarea>
+            </div>
+            <div>
+                <label id="user_langue">Pažymėkite programavimo/žymėjimo kalbas su kuriomis esate susipažinę:</label><br />
+                <table>
+                    <tr>
+                       <td> <input type="checkbox" name="langue" id="langue_c#" value="C#" /><label>C#</label></td>
+                        <td><input type="checkbox" name="langue" id="langue_java#" value="JAVA" /><label>JAVA</label></td>
+                        <td><input type="checkbox" name="langue" id="langue_php" value="PHP" /><label>PHP</label></td>
+                    </tr>
+                    <tr>
+                       <td><input type="checkbox" name="langue" id="langue_html" value="HTML" /><label>HTML</label></td>
+                       <td><input type="checkbox" name="langue" id="langue_css" value="CSS" /><label>CSS</label></td>
+                       <td> <input type="checkbox" name="langue" id="langue_javascript" value="JavaScript" /><label>JavaScript</label></td>
+                    </tr>
+                    <tr>
+                      <td>  <input type="checkbox" name="langue" id="langue_phyton" value="Phyton" /><label>Phyton</label></td>
+                        <td> <input type="checkbox" name="langue" id="langue_ruby" value="Ruby" /><label>Ruby</label></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button >Siųsti</button>
+            </div>
+    </div>
+</body>
+</html>
