@@ -1,0 +1,48 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+a:active{
+    color: red;
+}
+a:visited {
+    color: green;
+}
+
+div {
+    color: green;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+p {
+    letter-spacing: 0px;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.text {
+    letter-spacing: inherit;
+    text-align: justify;
+    text-indent: 100px;
+}
+td {
+    height: 100px;
+    vertical-align: bottom;
+    vertical-align: bottom;
+}
+
+[class^="text"]{
+/*    norint kad atributai kurie prasideda class butu tokie*/
+    color: purple;
+/*    Jei zvaigzute, * tai kad atributuose butu toks zodis pvz. text */
+}
+

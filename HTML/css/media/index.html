@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        @media screen and (max-width:500px){
+           .row div:nth-child(n){
+            width: 100%;
+            background-color: red;
+        }
+        }
+
+        @media screen and (min-width:501px){
+            .row div:nth-child(1){
+            width: 50px;
+        }
+        .row div:nth-child(n+2){
+            width: 100px;
+        }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        </style>
+</head>
+    <div class="row">
+        <div class="cell">Nr.</div>
+        <div class="cell">Name</div>
+        <div class="cell">Surname</div>
+        <div class="cell">Age</div>
+        <div class="cell">Sex</div>
+    </div>
+    <div class="row">
+        <div class="cell">1</div>
+        <div class="cell">Onutė</div>
+        <div class="cell">Pakalnutė</div>
+        <div class="cell">28</div>
+        <div class="cell">Woman</div>
+    </div>
+    <div class="row">
+        <div class="cell">2</div>
+        <div class="cell">Jonas</div>
+        <div class="cell">Jonaitis</div>
+        <div class="cell">25</div>
+        <div class="cell">Man</div>
+    </div>
+<body>
+</body>
+</html>
