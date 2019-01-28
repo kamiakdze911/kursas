@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS10</title>
+    <style>
+        .black, .red {
+            cursor: pointer;
+        }
+
+        .black {
+            color: black;
+        }
+        .red {
+            color:red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="list_section">
+        <h1 id="header">My own To Do List</h1>
+            <ul>
+                <li class="item black">Buy food</li>
+            </ul>
+        <form id="newItemForm" action="fakeForm.php">
+            <input type="text" id="item_field" placeholder="New item"/>
+            <input type="submit" id="add" value="Add this new item"/>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            var $list, $newItemForm
+                $list = $('ul');
+                $newItemForm = $('#newItemForm');
+
+                $newItemForm.on('submit', function(e) {
+                   e.preventDefault();
+                    var text = $('input:text');
+                    var realText = text.val();
+                    if (realText.length > 0) {
+
+                      $list.append('<li class="black">' + realText + '</li>');
+                    }
+                    text.val('');
+                });
+
+                    $list.on('click','li', function(){
+                        var $this = $(this);
+
+                        if ($this.hasClass('black')) {
+                                $this.addClass('red');
+                                $this.removeClass('black');
+
+                        } else if ($this.hasClass('red')) {
+                                $this.addClass('black');
+                                $this.removeClass('red');
+
+                        }
+
+                    });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9_paskaita_javaScript</title>
+</head>
+
+<body>
+    <button onclick="add(); ">Add something</button>
+    <div id="info"> </div>
+
+    <script type="text/javascript">
+        var count = 0;
+        var phones = ["nokia", "lg", "samsung", "apple", "sony"];
+        var color = 'style="color: red;"';
+
+        function add()
+        {
+            var i = 0;
+            var text = "";
+
+            if (count < 6 )
+            {
+               phones.push(count);
+            }
+
+
+            text = "<ul>";
+
+            for (i=0; i < phones.length; i++)
+            {
+                if (i-4 > 3)
+                {
+                    text += "<li " + color + ">" + phones[i] + "</li>";
+                }
+                else
+                {
+                    text += "<li>" + phones[i] + "</li>";
+                }
+            }
+
+            text += "</ul>";
+            count++;
+            document.getElementById("info").innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>

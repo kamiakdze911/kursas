@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS11</title>
+
+    <style>
+        #myButton {
+            display: none;
+            position: fixed;
+            bottom: 215px;
+            right: 30px;
+            cursor: pointer;
+            background-color: blue;
+            padding: 20px;
+            border-radius: 5px;
+/*            TO DOis on top?*/
+        }
+
+        #myButton:hover {
+            background-color: lightblue;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            z-index: 3;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: red;
+        }
+        #showBanner {
+            padding: 60px;
+        }
+
+        .visible {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="toTop()" id="myButton">To top</button>
+    <button onclick="toTopPosition, showHide()" id="showBanner"> Banner</button>
+    <div style="height: 2000px;">Test content</div>
+    <div class="visible" id="banner">BANNER</div>
+
+    <script>
+        window.onscroll = function() { scrollFunction (); };
+//        main thing for schecking scroll position
+
+        function toTop () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+
+        }
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById('myButton').style.display ='block';
+            } else {
+                document.getElementById('myButton').style.display ='none';
+            }
+        }
+
+        function toTopPosition () {
+            if (  document.getElementById('banner').classList.contains('hidden')) {
+
+        document.getElementById('myButton').style.bottom = "215px";
+            } else {
+            document.getElementById('myButton').style.bottom = "20px";
+            }
+        }
+
+        function showHide() {
+            document.getElementById('banner').classList.toggle('hidden');
+        }
+
+    </script>
+</body>
+</html>
